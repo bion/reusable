@@ -1,6 +1,5 @@
 (ns linear_interpolation.core)
 
-
 (defn linear-interpolate
   "Takes a collection of points as [x y] tuples, returns a function
    that linearly interpolates between the points"
