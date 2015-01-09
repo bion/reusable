@@ -12,3 +12,9 @@
           (/ (+ (* ya (- xb x)) (* yb (- x xa)))
              (- xb xa))
           (or ya yb))))))
+
+(def initial-set (into [] (take 10000 (range 2 8e9 3))))
+(def input-set (map (fn [x] [x (/ x 10)]) initial-set))
+
+(let [interpolate (linear-interpolate input-set)]
+        (prn (time (interpolate 809))))
